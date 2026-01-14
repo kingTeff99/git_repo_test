@@ -10,12 +10,9 @@ class Personnage:
         self.intelligence = intelligence
     
     def afficher_info(self):
-            print(f"Nom: {self.nom}\n")
-            print(f"Classe: {self.classe}\n")
-            print(f"Niveau: {self.niveau}\n")
-            print(f"Points de Vie: {self.points_de_vie}\n")
-            print(f"Force: {self.force}\n")
-            print(f"Intelligence: {self.intelligence}\n")
+            print(tabulate([[self.nom, self.classe, self.niveau, self.points_de_vie, self.force, self.intelligence]],
+                     headers=["Nom", "Classe", "Niveau", "Points de Vie", "Force", "Intelligence"],
+                     tablefmt="grid"))
 
     def attaquer(self, cible):
         print(f"{self.nom} attaque {cible.nom}!")
