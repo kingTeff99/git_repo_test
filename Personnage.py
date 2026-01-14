@@ -35,3 +35,4 @@ class Personnage:
         if self.points_de_vie <= 0:
              self.en_vie = False
              print(f"{self.nom} est mort!")
+        # Commentaire stupide juste pour tester le commit en direct et non en fast forward
