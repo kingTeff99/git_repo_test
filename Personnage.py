@@ -1,3 +1,5 @@
+from tabulate import tabulate
+
 class Personnage:
     def __init__(self, nom, classe, niveau, points_de_vie, force, intelligence):
         self.nom = nom
@@ -8,15 +10,12 @@ class Personnage:
         self.intelligence = intelligence
     
     def afficher_info(self):
-        info = (
-            f"Nom: {self.nom}\n"
-            f"Classe: {self.classe}\n"
-            f"Niveau: {self.niveau}\n"
-            f"Points de Vie: {self.points_de_vie}\n"
-            f"Force: {self.force}\n"
-            f"Intelligence: {self.intelligence}\n"
-        )
-        return info
+            print(f"Nom: {self.nom}\n")
+            print(f"Classe: {self.classe}\n")
+            print(f"Niveau: {self.niveau}\n")
+            print(f"Points de Vie: {self.points_de_vie}\n")
+            print(f"Force: {self.force}\n")
+            print(f"Intelligence: {self.intelligence}\n")
 
     def attaquer(self, cible):
         print(f"{self.nom} attaque {cible.nom}!")
